@@ -1,0 +1,1991 @@
+/*======================================================
+            GOOGLE FONTS
+======================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+
+/*======================================================
+                VARIABLES
+======================================================*/
+
+:root{
+
+    --gold:#D4AF37;
+    --gold-light:#F5D97A;
+    --gold-dark:#9A7415;
+
+    --navy:#071727;
+    --navy-light:#10243F;
+    --navy-dark:#04111D;
+
+    --white:#FFFFFF;
+    --text:#ECECEC;
+
+    --shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+
+/*======================================================
+                RESET
+======================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-snap-type:y mandatory;
+
+}
+
+
+body{
+
+    background:var(--navy);
+
+    color:var(--text);
+
+    font-family:'Cormorant Garamond',serif;
+
+    overflow-x:hidden;
+
+}
+
+
+/*======================================================
+            BARRE DE DÉFILEMENT
+======================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--navy-dark);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:20px;
+
+}
+
+
+/*======================================================
+            FOND ÉTOILÉ
+======================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(circle at 10% 20%,rgba(255,255,255,.8) 1px,transparent 2px),
+
+    radial-gradient(circle at 30% 70%,rgba(212,175,55,.8) 1px,transparent 2px),
+
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.6) 1px,transparent 2px),
+
+    radial-gradient(circle at 60% 80%,rgba(255,255,255,.7) 1px,transparent 2px),
+
+    radial-gradient(circle at 90% 60%,rgba(212,175,55,.6) 1px,transparent 2px),
+
+    radial-gradient(circle at 40% 40%,rgba(255,255,255,.6) 1px,transparent 2px),
+
+    linear-gradient(
+
+        180deg,
+
+        #061321,
+
+        #0A2036,
+
+        #071727
+
+    );
+
+    background-size:
+
+    220px 220px,
+
+    280px 280px,
+
+    250px 250px,
+
+    320px 320px,
+
+    260px 260px,
+
+    300px 300px,
+
+    cover;
+
+    z-index:-2;
+
+}
+
+
+/*======================================================
+        PETITES ÉTOILES ANIMÉES
+======================================================*/
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(circle,rgba(255,255,255,.9) 1px,transparent 1px);
+
+    background-size:180px 180px;
+
+    opacity:.15;
+
+    animation:starsMove 120s linear infinite;
+
+    z-index:-1;
+
+}
+
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-500px);
+
+    }
+
+}/*======================================================
+            PAGE D'ACCUEIL PREMIUM
+======================================================*/
+
+#welcome-screen{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+    position:relative;
+
+    scroll-snap-align:start;
+
+}
+
+
+.background-stars{
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+
+.welcome-card{
+
+    width:540px;
+    max-width:95%;
+
+    background:rgba(13,32,56,.92);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:18px;
+
+    padding:65px 45px;
+
+    text-align:center;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 0 0 1px rgba(212,175,55,.08),
+        0 25px 60px rgba(0,0,0,.55),
+        0 0 35px rgba(212,175,55,.08);
+
+    animation:fadeUp 1s ease both;
+
+}
+
+
+.ornament{
+
+    color:var(--gold);
+
+    font-size:42px;
+
+    margin-bottom:28px;
+
+    text-shadow:0 0 12px rgba(212,175,55,.35);
+
+}
+
+
+.welcome-text{
+
+    font-size:28px;
+
+    line-height:1.7;
+
+    color:#d7d7d7;
+
+    margin-bottom:38px;
+
+}
+
+
+.couple-name{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:68px;
+
+    font-weight:600;
+
+    line-height:1.25;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+
+}
+
+
+.couple-name span{
+
+    display:block;
+
+}
+
+
+.couple-name small{
+
+    display:block;
+
+    margin:12px 0;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    color:var(--gold-light);
+
+}
+
+
+.divider{
+
+    width:140px;
+
+    height:1px;
+
+    margin:0 auto 26px;
+
+    background:linear-gradient(90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+}
+
+
+.event-date{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold-light);
+
+    font-size:24px;
+
+    letter-spacing:3px;
+
+    margin-bottom:48px;
+
+}
+
+
+/*======================================================
+                    BOUTONS
+======================================================*/
+
+#openBook{
+
+    padding:18px 42px;
+
+    border:none;
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-family:'Cinzel',serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    background:linear-gradient(135deg,
+        #F7E08F,
+        #D4AF37,
+        #B88918
+    );
+
+    color:#081423;
+
+    box-shadow:
+        0 10px 25px rgba(212,175,55,.35),
+        inset 0 1px 0 rgba(255,255,255,.45);
+
+    transition:all .35s ease;
+
+}
+
+
+#openBook:hover{
+
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 16px 35px rgba(212,175,55,.45),
+        inset 0 1px 0 rgba(255,255,255,.55);
+
+}
+
+
+#openBook:active{
+
+    transform:translateY(-1px) scale(.99);
+
+}
+
+
+/*======================================================
+                BOUTON MUSIQUE
+======================================================*/
+
+#musicBtn{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(212,175,55,.95);
+
+    color:#081423;
+
+    font-size:24px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 10px 25px rgba(212,175,55,.35),
+        0 0 15px rgba(212,175,55,.25);
+
+    transition:all .3s ease;
+
+    z-index:1000;
+
+}
+
+
+#musicBtn:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 14px 30px rgba(212,175,55,.45),
+        0 0 20px rgba(212,175,55,.35);
+
+}
+
+
+/*======================================================
+                ANIMATIONS GLOBALES
+======================================================*/
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}/*======================================================
+                PAGE D'ACCUEIL
+======================================================*/
+
+#welcome-screen{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+    scroll-snap-align:start;
+
+}
+
+.background-stars{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:0;
+
+}
+
+.welcome-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:650px;
+
+    max-width:95%;
+
+    padding:70px 50px;
+
+    text-align:center;
+
+    border:1px solid rgba(212,175,55,.45);
+
+    border-radius:18px;
+
+    background:rgba(7,23,39,.72);
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:0 0 60px rgba(0,0,0,.45);
+
+}
+
+.ornament{
+
+    color:var(--gold);
+
+    font-size:50px;
+
+    margin-bottom:25px;
+
+}
+
+.welcome-text{
+
+    color:#f2f2f2;
+
+    font-size:28px;
+
+    line-height:1.6;
+
+    margin-bottom:40px;
+
+}
+
+.couple-name{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:72px;
+
+    line-height:1.4;
+
+    letter-spacing:6px;
+
+}
+
+.couple-name span{
+
+    display:block;
+
+}
+
+.couple-name small{
+
+    display:block;
+
+    color:var(--gold-light);
+
+    font-size:40px;
+
+    margin:18px 0;
+
+}
+
+.divider{
+
+    width:180px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:40px auto;
+
+}
+
+.event-date{
+
+    color:var(--gold-light);
+
+    font-size:30px;
+
+    letter-spacing:4px;
+
+    font-family:'Cinzel',serif;
+
+}
+
+#openBook{
+
+    margin-top:50px;
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--gold-dark));
+
+    color:#081727;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#openBook:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(212,175,55,.45);
+
+}
+
+#musicBtn{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#081727;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:999;
+
+    box-shadow:0 0 20px rgba(212,175,55,.45);
+
+    transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.1);
+
+}/*======================================================
+            PAGES DE L'INVITATION
+======================================================*/
+
+#invitation{
+
+    width:100%;
+
+}
+
+.page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:70px 20px;
+
+    scroll-snap-align:start;
+
+}
+
+.page-container{
+
+    width:850px;
+
+    max-width:95%;
+
+    background:rgba(10,32,54,.72);
+
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:20px;
+
+    padding:60px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(0,0,0,.35);
+
+}
+
+.page-decoration{
+
+    color:var(--gold);
+
+    font-size:40px;
+
+    margin-bottom:25px;
+
+}
+
+.page-title{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:50px;
+
+    letter-spacing:3px;
+
+}
+
+.gold-line{
+
+    width:180px;
+
+    height:2px;
+
+    background:var(--gold);
+
+    margin:30px auto 45px;
+
+}
+
+.page-text{
+
+    font-size:28px;
+
+    color:#f2f2f2;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.scroll-indicator{
+
+    margin-top:50px;
+
+    color:var(--gold-light);
+
+    font-size:20px;
+
+}
+
+.arrow{
+
+    margin-top:12px;
+
+    font-size:34px;
+
+    animation:bounce 2s infinite;
+
+}
+
+@keyframes bounce{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(12px);
+
+}
+
+}/*======================================================
+            INVITÉ - TABLE
+======================================================*/
+
+.small-title{
+
+    color:var(--gold-light);
+
+    font-size:26px;
+
+    margin-bottom:15px;
+
+    letter-spacing:2px;
+
+}
+
+#guestName{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:52px;
+
+    margin-bottom:35px;
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+}
+
+.table-box{
+
+    width:420px;
+
+    max-width:100%;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border:2px solid var(--gold);
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.03);
+
+    transition:.4s;
+
+}
+
+.table-box:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.25);
+
+}
+
+.table-box h3{
+
+    color:var(--gold-light);
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+#guestTable{
+
+    color:white;
+
+    font-family:'Cinzel',serif;
+
+    font-size:36px;
+
+}
+
+.footer-text{
+
+    margin-top:25px;
+
+    color:#cccccc;
+
+    font-size:22px;
+
+}
+
+
+/*======================================================
+            CITATION
+======================================================*/
+
+.love-quote{
+
+    font-size:36px;
+
+    font-style:italic;
+
+    color:var(--gold-light);
+
+    margin:35px 0;
+
+    line-height:1.6;
+
+}
+
+
+/*======================================================
+            FAMILLES
+======================================================*/
+
+.family-name{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:46px;
+
+    margin:18px 0;
+
+    letter-spacing:3px;
+
+}
+
+.and-text{
+
+    font-size:42px;
+
+    color:var(--gold-light);
+
+    margin:10px 0;
+
+}
+
+.couple-title{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:58px;
+
+    line-height:1.4;
+
+    margin:35px 0;
+
+}
+
+
+/*======================================================
+            DRESS CODE
+======================================================*/
+
+.dress-title{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:70px;
+
+    line-height:1.5;
+
+    margin:40px 0;
+
+}/*======================================================
+                TIMELINE
+======================================================*/
+
+.timeline{
+
+    margin-top:40px;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-bottom:50px;
+
+    align-items:flex-start;
+
+}
+
+.time{
+
+    min-width:130px;
+
+    padding:12px;
+
+    border-radius:30px;
+
+    background:var(--gold);
+
+    color:var(--navy);
+
+    font-weight:bold;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+.timeline-content{
+
+    flex:1;
+
+    text-align:left;
+
+    border-left:2px solid rgba(212,175,55,.4);
+
+    padding-left:30px;
+
+}
+
+.timeline-content h3{
+
+    color:var(--gold);
+
+    font-size:32px;
+
+    margin-bottom:12px;
+
+}
+
+.timeline-content p{
+
+    color:white;
+
+    font-size:22px;
+
+    line-height:1.6;
+
+}/*======================================================
+            SALLE DE RÉCEPTION
+======================================================*/
+
+.location-card{
+
+    margin:45px auto;
+
+    padding:45px;
+
+    border:2px solid rgba(212,175,55,.35);
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.location-card h1{
+
+    color:var(--gold);
+
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+
+    margin:18px 0;
+
+}
+
+.location-card h3{
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+.location-card p{
+
+    font-size:24px;
+
+    margin:12px 0;
+
+}/*======================================================
+            BOISSONS
+======================================================*/
+
+.drink-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+.drink-card{
+
+    padding:22px;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    color:white;
+
+    font-size:24px;
+
+    transition:.35s;
+
+}
+
+.drink-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(212,175,55,.10);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.20);
+
+}/*======================================================
+            MUSIQUE
+======================================================*/
+
+.music-card{
+
+    margin:45px auto;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    border:2px solid rgba(212,175,55,.35);
+
+}
+
+.music-card h1{
+
+    font-family:'Cinzel',serif;
+
+    color:var(--gold);
+
+    font-size:48px;
+
+    margin:20px 0;
+
+}
+
+.music-card h3{
+
+    color:white;
+
+    font-size:30px;
+
+}
+
+
+/*======================================================
+            CONTACT
+======================================================*/
+
+.contact-card{
+
+    width:420px;
+
+    max-width:100%;
+
+    margin:45px auto;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#b88d1d,#d4af37,#f4dc89);
+
+    color:#081727;
+
+}
+
+.contact-card h1{
+
+    font-size:34px;
+
+    font-family:'Cinzel',serif;
+
+}/*======================================================
+                ANIMATIONS
+======================================================*/
+
+.page-container{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    animation:fadePage 1s ease forwards;
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*======================================================
+            ANIMATION DU BOUTON
+======================================================*/
+
+#openBook{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#openBook::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.4);
+
+    transform:skewX(-25deg);
+
+}
+
+#openBook:hover::before{
+
+    animation:shine .8s;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+
+/*======================================================
+            CARTES FLOTTANTES
+======================================================*/
+
+.location-card,
+.music-card,
+.contact-card,
+.table-box,
+.drink-card{
+
+    transition:.4s;
+
+}
+
+.location-card:hover,
+.music-card:hover,
+.contact-card:hover,
+.table-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.drink-card:hover{
+
+    transform:translateY(-10px) scale(1.05);
+
+}
+
+
+/*======================================================
+            ICÔNES
+======================================================*/
+
+.page-decoration{
+
+    animation:rotateDiamond 6s linear infinite;
+
+}
+
+@keyframes rotateDiamond{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/*======================================================
+            TITRES
+======================================================*/
+
+.page-title{
+
+    text-shadow:
+
+    0 0 8px rgba(212,175,55,.4),
+
+    0 0 20px rgba(212,175,55,.25);
+
+}/*======================================================
+            TABLETTE
+======================================================*/
+
+@media(max-width:900px){
+
+.page-container{
+
+padding:45px;
+
+}
+
+.page-title{
+
+font-size:40px;
+
+}
+
+.page-text{
+
+font-size:24px;
+
+}
+
+.couple-name{
+
+font-size:54px;
+
+}
+
+.timeline-item{
+
+flex-direction:column;
+
+}
+
+.timeline-content{
+
+border-left:none;
+
+padding-left:0;
+
+text-align:center;
+
+}
+
+.time{
+
+margin:auto;
+
+margin-bottom:20px;
+
+}
+
+}/*======================================================
+                TÉLÉPHONE
+======================================================*/
+
+@media(max-width:600px){
+
+.welcome-card{
+
+padding:40px 25px;
+
+}
+
+.couple-name{
+
+font-size:42px;
+
+letter-spacing:2px;
+
+}
+
+.event-date{
+
+font-size:22px;
+
+}
+
+.page-container{
+
+padding:30px 20px;
+
+}
+
+.page-title{
+
+font-size:32px;
+
+}
+
+.page-text{
+
+font-size:20px;
+
+line-height:1.7;
+
+}
+
+#guestName{
+
+font-size:34px;
+
+}
+
+#guestTable{
+
+font-size:26px;
+
+}
+
+.couple-title{
+
+font-size:38px;
+
+}
+
+.family-name{
+
+font-size:34px;
+
+}
+
+.dress-title{
+
+font-size:44px;
+
+}
+
+.location-card h1{
+
+font-size:34px;
+
+}
+
+.location-card p{
+
+font-size:20px;
+
+}
+
+.music-card h1{
+
+font-size:34px;
+
+}
+
+.drink-card{
+
+font-size:18px;
+
+}
+
+.contact-card h1{
+
+font-size:24px;
+
+}
+
+#musicBtn{
+
+width:50px;
+
+height:50px;
+
+font-size:20px;
+
+right:15px;
+
+bottom:15px;
+
+}
+
+}/*======================================================
+            EFFETS DE LUXE
+======================================================*/
+
+.gold-line{
+
+    position:relative;
+
+}
+
+.gold-line::before,
+.gold-line::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    color:var(--gold);
+
+    top:-14px;
+
+    font-size:18px;
+
+}
+
+.gold-line::before{
+
+left:-15px;
+
+}
+
+.gold-line::after{
+
+right:-15px;
+
+}
+
+
+.page-container{
+
+border-top:3px solid rgba(212,175,55,.15);
+
+border-bottom:3px solid rgba(212,175,55,.15);
+
+}
+
+
+.page{
+
+position:relative;
+
+}
+
+
+.page::after{
+
+content:"";
+
+position:absolute;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:90%;
+
+height:1px;
+
+background:rgba(212,175,55,.08);
+
+}.qr-card{
+
+    width:260px;
+
+    height:260px;
+
+    margin:40px auto;
+
+    padding:15px;
+
+    background:white;
+
+    border-radius:20px;
+
+    border:4px solid var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.qr-card img{
+
+    width:100%;
+
+    border-radius:12px;
+
+}.qr-card{
+
+    width:280px;
+
+    height:280px;
+
+    margin:40px auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    border:4px solid var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+#qrcode{
+
+    width:220px;
+
+    height:220px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}/*======================================================
+                LIVRE D'OR
+======================================================*/
+
+.guestbook-card{
+
+    margin:40px auto;
+
+    padding:35px;
+
+    max-width:650px;
+
+    background:rgba(255,255,255,.05);
+
+    border:2px solid var(--gold);
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.guestbook-card p{
+
+    color:white;
+
+    font-size:26px;
+
+    line-height:1.8;
+
+}
+
+.guestbook-card:hover{
+
+    transform:translateY(-5px);
+
+    transition:.4s;
+
+}/*======================================================
+            LIVRE D'OR
+======================================================*/
+
+#openGuestBook{
+
+    margin-top:40px;
+
+    padding:18px 40px;
+
+    background:var(--gold);
+
+    color:#081727;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+#guestBookModal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.guestBookContent{
+
+    width:550px;
+
+    max-width:95%;
+
+    padding:40px;
+
+    background:#081c33;
+
+    border:2px solid var(--gold);
+
+    border-radius:20px;
+
+}
+
+.guestBookContent h2{
+
+    color:var(--gold);
+
+    margin-bottom:30px;
+
+    text-align:center;
+
+}
+
+.guestBookContent input,
+.guestBookContent textarea{
+
+    width:100%;
+
+    margin-bottom:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:18px;
+
+}
+
+#sendMessage,
+#closeGuestBook{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+#sendMessage{
+
+    background:var(--gold);
+
+}
+
+#closeGuestBook{
+
+    background:#cccccc;
+
+}/*======================================================
+                DRESS CODE
+======================================================*/
+
+.dress-code{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:90px;
+
+    margin:50px 0;
+
+}
+
+.dress-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.color-circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    border:4px solid #D4AF37;
+
+    box-shadow:0 0 20px rgba(212,175,55,.4);
+
+    margin-bottom:18px;
+
+}
+
+.black{
+
+    background:#111111;
+
+}
+
+.white{
+
+    background:#FFFFFF;
+
+}
+
+.dress-item span{
+
+    margin-top:10px;
+
+    color:#D4AF37;
+
+    font-size:24px;
+
+    font-family:'Cinzel', serif;
+
+    letter-spacing:2px;
+
+}
+
+@media(max-width:768px){
+
+    .dress-code{
+
+        gap:40px;
+
+    }
+
+    .color-circle{
+
+        width:75px;
+
+        height:75px;
+
+    }
+
+    .dress-item span{
+
+        font-size:18px;
+
+    }
+
+}/*==========================================
+            CONFIRMATION
+==========================================*/
+
+.confirmation-buttons{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin:45px auto;
+
+}
+
+.confirm-btn,
+.absent-btn{
+
+    width:420px;
+
+    max-width:90%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    font-family:'Cinzel',serif;
+
+}
+
+.confirm-btn{
+
+    background:#25D366;
+
+    color:white;
+
+}
+
+.confirm-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(37,211,102,.35);
+
+}
+
+.absent-btn{
+
+    background:#C0392B;
+
+    color:white;
+
+}
+
+.absent-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(192,57,43,.35);
+
+}
