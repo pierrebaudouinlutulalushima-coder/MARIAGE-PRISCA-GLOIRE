@@ -397,272 +397,81 @@ if (scrollIndicators.length > 0) {
 
 
 }//==================================================
-//      CHARGEMENT DES INVITÉS + QR CODE
+//      CHARGEMENT AUTOMATIQUE DE L'INVITÉ + QR CODE
 //==================================================
 
-
 async function loadGuest() {
-
-
     try {
-
-
-        const response = await fetch("invites.json");
-
+        const response = await fetch("invites.json", { cache: "no-store" });
 
         if (!response.ok) {
-
             throw new Error("Impossible de charger invites.json");
-
         }
 
+        const guests = await response.json();
 
-
-        const data = await response.json();
-
-
-
+        // L'invité est identifié par ?invite=cle
+        // Exemple : index.html?invite=olone
         const params = new URLSearchParams(window.location.search);
-
-
         const inviteKey = params.get("invite");
 
-
-
         if (!inviteKey) {
-
-
             console.log("Aucun invité dans l'URL");
-
-
             return;
-
-
         }
 
+        const key = inviteKey
+            .toLowerCase()
+            .trim()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "");
 
-
-
-        let guestFound = null;
-
-
-
-
-        // Recherche dans toutes les tables
-
-        data.tables.forEach(table => {
-
-
-
-            table.invites.forEach(invite => {
-
-
-
-                const key = invite
-
-                    .toLowerCase()
-
-                    .normalize("NFD")
-
-                    .replace(/[\u0300-\u036f]/g, "")
-
-                    .replace(/\s+/g, "-");
-
-
-
-
-                if (key === inviteKey) {
-
-
-
-                    guestFound = {
-
-
-                        nom: invite,
-
-                        table: table.table
-
-
-                    };
-
-
-
-                }
-
-
-
-            });
-
-
-
-        });
-
-
-
-
-
+        const guestFound = guests[key];
 
         if (!guestFound) {
-
-
-            console.error(
-                "Invité introuvable :",
-                inviteKey
-            );
-
-
+            console.error("Invité introuvable :", inviteKey);
             return;
-
-
         }
 
-
-
-
-
-
-        // Affichage informations invité
-
-
-
+        // Nom et table affichés automatiquement
         const guestName = document.getElementById("guestName");
-
         const guestTable = document.getElementById("guestTable");
-
-
-
-        if (guestName) {
-
-            guestName.textContent = guestFound.nom;
-
-        }
-
-
-
-        if (guestTable) {
-
-            guestTable.textContent = guestFound.table;
-
-        }
-
-
-
-
-
-
-        // Affichage QR page
-
-
-
         const guestNameQR = document.getElementById("guestNameQR");
-
         const guestTableQR = document.getElementById("guestTableQR");
 
+        if (guestName) guestName.textContent = guestFound.nom;
+        if (guestTable) guestTable.textContent = guestFound.table;
+        if (guestNameQR) guestNameQR.textContent = guestFound.nom;
+        if (guestTableQR) guestTableQR.textContent = guestFound.table;
 
+        // Titre personnalisé
+        document.title = guestFound.nom + " | Invitation Mariage";
 
-        if (guestNameQR) {
+        // QR code personnel de l'invité.
+        // Il contient exactement le lien de cette invitation personnalisée.
+        const qrContainer = document.getElementById("qrcode");
 
-            guestNameQR.textContent = guestFound.nom;
-
-        }
-
-
-
-        if (guestTableQR) {
-
-            guestTableQR.textContent = guestFound.table;
-
-        }
-
-
-
-
-
-
-
-        // Titre navigateur
-
-
-        document.title =
-            guestFound.nom + " | Invitation Mariage";
-
-
-
-
-
-
-
-
-        // Génération QR CODE PERSONNEL
-
-
-
-        const qrContainer =
-            document.getElementById("qrcode");
-
-
-
-        if (qrContainer) {
-
-
-
+        if (qrContainer && typeof QRCode !== "undefined") {
             qrContainer.innerHTML = "";
 
-
+            const personalUrl =
+                window.location.origin +
+                window.location.pathname +
+                "?invite=" +
+                encodeURIComponent(key);
 
             new QRCode(qrContainer, {
-
-
-                text: window.location.href,
-
-
+                text: personalUrl,
                 width: 220,
-
-
                 height: 220,
-
-
-                colorDark:"#000000",
-
-
-                colorLight:"#ffffff",
-
-
-                correctLevel:
-                    QRCode.CorrectLevel.H
-
-
-
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
             });
-
-
-
         }
-
-
-
-
-
-
+    } catch (error) {
+        console.error("Erreur chargement invité :", error);
     }
-
-
-    catch(error){
-
-
-        console.error(
-            "Erreur chargement invité :",
-            error
-        );
-
-
-    }
-
-
 }
-
-
-
-
 
 loadGuest();

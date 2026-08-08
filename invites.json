@@ -3,145 +3,118 @@
     "nom": "COUPLE OLONE",
     "table": "TABLE PARIS"
   },
-
   "ingrid_kisita": {
     "nom": "COUPLE INGRID KISITA",
     "table": "TABLE PARIS"
   },
-
   "kally_mbota": {
     "nom": "COUPLE KALLY MBOTA",
     "table": "TABLE PARIS"
   },
-
   "manda": {
     "nom": "COUPLE MANDA",
     "table": "TABLE PARIS"
   },
-
   "kelly_makitu": {
     "nom": "COUPLE KELLY MAKITU",
     "table": "TABLE PARIS"
   },
-
   "aline": {
     "nom": "COUPLE ALINE",
     "table": "TABLE VENISE"
   },
-
   "louisette": {
     "nom": "COUPLE LOUISETTE",
     "table": "TABLE VENISE"
   },
-
   "brunette": {
     "nom": "COUPLE BRUNETTE",
     "table": "TABLE VENISE"
   },
-
   "lauriane": {
     "nom": "COUPLE LAURIANE",
     "table": "TABLE VENISE"
   },
-
   "kadima_malu": {
     "nom": "COUPLE KADIMA & MALU",
     "table": "TABLE SANTORIN"
   },
-
   "maguy": {
     "nom": "COUPLE MAGUY",
     "table": "TABLE SANTORIN"
   },
-
   "munsi": {
     "nom": "COUPLE MUNSI",
     "table": "TABLE SANTORIN"
   },
-
   "tshilumba": {
     "nom": "COUPLE TSHILUMBA",
     "table": "TABLE SANTORIN"
   },
-
   "gbenge": {
     "nom": "COUPLE GBENGE",
     "table": "TABLE SANTORIN"
   },
-
   "diumu": {
     "nom": "COUPLE DIUMU",
     "table": "TABLE BALI"
   },
-
   "kadima_isabel": {
     "nom": "COUPLE KADIMA & ISABEL",
     "table": "TABLE BALI"
   },
-
   "olivier": {
     "nom": "COUPLE OLIVIER",
     "table": "TABLE BALI"
   },
-
   "joel": {
     "nom": "COUPLE JOEL",
     "table": "TABLE BALI"
   },
-
   "hugues": {
     "nom": "COUPLE HUGUES",
     "table": "TABLE BALI"
   },
-
   "legerme": {
     "nom": "COUPLE LEGERME",
     "table": "TABLE DUBAÏ"
   },
-
   "pierre": {
     "nom": "COUPLE PIERRE",
     "table": "TABLE DUBAÏ"
   },
-
   "blanchard": {
     "nom": "COUPLE BLANCHARD",
     "table": "TABLE DUBAÏ"
   },
-
   "pierrot": {
     "nom": "COUPLE PIERROT",
     "table": "TABLE DUBAÏ"
-  }
-}"angele_lokuitu": {
-  "nom": "COUPLE ANGELE LOKUITU",
-  "table": "TABLE X"
-},
-
-"noelle_lusamba": {
-  "nom": "COUPLE NOELLE LUSAMBA",
-  "table": "TABLE X"
-},
-
-"awa": {
-  "nom": "COUPLE AWA",
-  "table": "TABLE X"
-},
-
-"lydie_kabongo": {
-  "nom": "COUPLE LYDIE KABONGO",
-  "table": "TABLE X"
-},
-
-"ilange_lusaimba": {
-  "nom": "COUPLE ILANGE LUSAIMBA",
-  "table": "TABLE X"
-},
-
-"kapela": {
-  "nom": "COUPLE KAPELA",
-  "table": "TABLE X"
-}{
+  },
+  "angele_lokuitu": {
+    "nom": "COUPLE ANGELE LOKUITU",
+    "table": "TABLE X"
+  },
+  "noelle_lusamba": {
+    "nom": "COUPLE NOELLE LUSAMBA",
+    "table": "TABLE X"
+  },
+  "awa": {
+    "nom": "COUPLE AWA",
+    "table": "TABLE X"
+  },
+  "lydie_kabongo": {
+    "nom": "COUPLE LYDIE KABONGO",
+    "table": "TABLE X"
+  },
+  "ilange_lusaimba": {
+    "nom": "COUPLE ILANGE LUSAIMBA",
+    "table": "TABLE X"
+  },
+  "kapela": {
+    "nom": "COUPLE KAPELA",
+    "table": "TABLE X"
+  },
   "muya_starkys": {
     "nom": "COUPLE MUYA STARKYS",
     "table": "TABLE LONDRE"
@@ -605,8 +578,7 @@
   "benedicte": {
     "nom": "BENEDICTE",
     "table": "TABLE SUEDE"
-  }
-}{
+  },
   "honorable_josphine": {
     "nom": "COUPLE HONORABLE JOSPHINE",
     "table": "TABLE I"
@@ -627,7 +599,6 @@
     "nom": "HUGUETTE",
     "table": "TABLE I"
   },
-
   "jean_bedel": {
     "nom": "COUPLE JEAN BEDEL",
     "table": "TABLE II"
@@ -648,7 +619,6 @@
     "nom": "CÉCILE",
     "table": "TABLE II"
   },
-
   "papa_belly_nzonza": {
     "nom": "COUPLE PAPA BELLY NZONZA",
     "table": "TABLE III"
@@ -673,7 +643,6 @@
     "nom": "PHILIPPE & NTITA",
     "table": "TABLE III"
   },
-
   "agnatiel_moise": {
     "nom": "COUPLE AGNATIEL MOÏSE",
     "table": "TABLE IV"
@@ -698,7 +667,6 @@
     "nom": "BELINDA",
     "table": "TABLE IV"
   },
-
   "tania": {
     "nom": "COUPLE TANIA",
     "table": "TABLE V"
@@ -719,7 +687,6 @@
     "nom": "DODO & DANI",
     "table": "TABLE V"
   },
-
   "herve": {
     "nom": "COUPLE HERVÉ",
     "table": "TABLE VII"
@@ -743,8 +710,7 @@
   "raissa": {
     "nom": "RAÏSSA",
     "table": "TABLE VII"
-  }
-}{
+  },
   "m_esther_wanza": {
     "nom": "COUPLE M. & ESTHER WANZA",
     "table": "TABLE VIII"
@@ -769,7 +735,6 @@
     "nom": "BENJAMIN LOKUNU",
     "table": "TABLE VIII"
   },
-
   "maman_leonnie_thethe": {
     "nom": "COUPLE MAMAN LÉONNIE & THÉTHÉ",
     "table": "TABLE IX"
@@ -789,28 +754,25 @@
   "maman_tina": {
     "nom": "MAMAN TINA",
     "table": "TABLE IX"
+  },
+  "judith": {
+    "nom": "COUPLE JUDITH",
+    "table": "TABLE VI"
+  },
+  "ma_elissa": {
+    "nom": "MA ÉLISSA",
+    "table": "TABLE VI"
+  },
+  "pa_robert": {
+    "nom": "PA ROBERT",
+    "table": "TABLE VI"
+  },
+  "erione_benjamin": {
+    "nom": "ERIONE / BENJAMIN",
+    "table": "TABLE VI"
+  },
+  "israel_claudia": {
+    "nom": "ISRAËL / CLAUDIA",
+    "table": "TABLE VI"
   }
-}"judith": {
-  "nom": "COUPLE JUDITH",
-  "table": "TABLE VI"
-},
-
-"ma_elissa": {
-  "nom": "MA ÉLISSA",
-  "table": "TABLE VI"
-},
-
-"pa_robert": {
-  "nom": "PA ROBERT",
-  "table": "TABLE VI"
-},
-
-"erione_benjamin": {
-  "nom": "ERIONE / BENJAMIN",
-  "table": "TABLE VI"
-},
-
-"israel_claudia": {
-  "nom": "ISRAËL / CLAUDIA",
-  "table": "TABLE VI"
 }
